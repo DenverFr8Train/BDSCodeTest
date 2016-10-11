@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>
+    This site was constructed using the latest Rapid Application Development tools available in Visual Studio. 
+    In order to compy with the spirit of the test, which was to produce an end-to-end CRUD app as quickly as possible, much of this code is auto-generated and then tweaked to my specific purpose.
+    Another efficiency gained from this approach is that features like a basic bootstrap layout and working authentication with login and registration functions already in place.
+</p>
+
+<p>Here are the steps I used for fastest possible delivery:<br />
+    <ol>
+        <li>Create an ASP.NET Web Application as the basis for the solution.</li>
+        <li>Add a SQL Server Database project to the solution.</li>
+        <li>Create a basic Task table with an ID (Primary Key), Name and Date fields.</li>
+        <li>Create a BDSCodeTest user (password: C0d3t3$t) to bypass Windows Authentication and make it easier to implement on delivery.</li>
+        <li>Run the database project to create all objects in SQL Server.</li>
+        <li>Create Entity Framework model based on the Task table.</li>
+        <li>Add a new scaffolded item to the project, using the EF Task model and the SQL credentials provided. This will generate all the views and controller actions necessary for basic CRUD.</li>
+        <li>Apply any style changes required by editing the project CSS. In this case, I implemented a basic Bernard Data Solutions theme with a red color scheme and a company logo.</li>
+        <li>Improve the data validation by adding a Metadata class with Data Annotations and then bind it to the EF model using a Partial Class.</li>
+        <li>After that, it is down to aesthetic improvements and adding more elegant features as desired.</li>
+        <li>As an additional feature, I added a 3rd party MVC/AJAX calendar control, (<a href="https://fullcalendar.io/" target="_blank">fullcalendar</a>), and implemented a basic data get on it.</li>
+    </ol>
+</p>
+
+<p>
+    All told, this repeatable process will lead to development of an end-to-end solution in a matter of an hour or so. 
+    For future changes, alterations can be made in the DB project and pushed to the server, then refreshed into the EF model.
+    From there, controller actions and view edits can be written as needed. 
+</p>
+
+
+
+

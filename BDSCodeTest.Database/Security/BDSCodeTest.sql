@@ -1,0 +1,2 @@
+﻿CREATE USER [BDSCodeTest] FOR LOGIN [BDSCodeTest];
+

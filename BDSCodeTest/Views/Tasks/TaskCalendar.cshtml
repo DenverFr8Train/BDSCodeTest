@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "Task Calendar";
+}
+
+@section header{ 
+    <link rel='stylesheet' href='~/Content/fullcalendar.css' />
+
+    <style>
+
+        #calendar {
+            width: 65%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: antiquewhite;
+        }
+
+    </style>
+}
+
+@section Scripts {
+    <script src='/Scripts/lib/jquery.min.js'></script>
+    <script src='/Scripts/lib/moment.min.js'></script>
+    <script src='/Scripts/fullcalendar.js'></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            DisplayCalendar();
+        });
+
+        function DisplayCalendar() {
+            $('#calendar').fullCalendar({
+                events: "GetEvents"
+            });
+        }
+    </script>
+}
+
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<div id="calendar"></div>
+
+<div>
+    @Html.ActionLink("Back to Task Management", "Index")
+</div>
+
+
+
+
+
+
+
+
